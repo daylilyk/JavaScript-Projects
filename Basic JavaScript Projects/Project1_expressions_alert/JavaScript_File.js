@@ -1,0 +1,1 @@
+alert("Happy Pride Month!")
