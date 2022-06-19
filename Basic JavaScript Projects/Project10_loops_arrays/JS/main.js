@@ -23,3 +23,11 @@ function for_Loop() {
     }
     document.getElementById("List_of_Instruments").innerHTML = Content
 }
+
+function Cat_Pics() {
+    var Cat_Picture = [];
+    Cat_Picture[0] = "sleeping";
+    Cat_Picture[1] = "playing";
+    Cat_Picture[2] = "eating";
+    document.getElementById("Cat").innerHTML = "In this picture, the cat is " + Cat_Picture[2] + ".";
+}
