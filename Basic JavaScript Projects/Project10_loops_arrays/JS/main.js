@@ -7,3 +7,9 @@ function Call_Loop() {
     }
     document.getElementById("Loop").innerHTML = Digit;
 }
+
+function Check_Length() {
+    let text = "hello world";
+    let length = text.length;
+    document.getElementById("Length").innerHTML= length;
+}
