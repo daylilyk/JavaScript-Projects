@@ -31,3 +31,9 @@ function Cat_Pics() {
     Cat_Picture[2] = "eating";
     document.getElementById("Cat").innerHTML = "In this picture, the cat is " + Cat_Picture[2] + ".";
 }
+
+function constant_function() {
+    const Fruit = {type:"Apple", flavor:"Pink Lady", color:"pink"};
+    Fruit.price = "$1.99";
+    document.getElementById("Constant").innerHTML = "The cost of the " + Fruit.type + " was " + Fruit.price;
+}
