@@ -14,7 +14,7 @@ function Check_Length() {
     document.getElementById("Length").innerHTML= length;
 }
 
-var Instruments = ["Guitar", "Bass", "Flute", "Drums", "Piano", "Violin"];
+let Instruments = ["Guitar", "Bass", "Flute", "Drums", "Piano", "Violin"];
 var Content = "";
 var Y;
 function for_Loop() {
@@ -35,5 +35,5 @@ function Cat_Pics() {
 function constant_function() {
     const Fruit = {type:"Apple", flavor:"Pink Lady", color:"pink"};
     Fruit.price = "$1.99";
-    document.getElementById("Constant").innerHTML = "The cost of the " + Fruit.type + " was " + Fruit.price;
+    document.getElementById("Constant").innerHTML = "The cost of the " + Fruit.flavor + Fruit.type + " was " + Fruit.price;
 }
