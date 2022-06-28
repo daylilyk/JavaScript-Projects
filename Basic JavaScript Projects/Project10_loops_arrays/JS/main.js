@@ -37,3 +37,8 @@ function constant_function() {
     Fruit.price = "$1.99";
     document.getElementById("Constant").innerHTML = "The cost of the " + Fruit.flavor + Fruit.type + " was " + Fruit.price;
 }
+
+document.getElementById("Return").innerHTML = myFunction("Lily");
+function myFunction(name) {
+    return "hello " + name;
+}
