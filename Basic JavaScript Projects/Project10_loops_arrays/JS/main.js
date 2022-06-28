@@ -53,3 +53,19 @@ let instrument = {
     }
 };
 document.getElementById("Instrument_info").innerHTML = instrument.description();
+
+let text = "";
+for (let i = 3; i < 9; i++) {
+    if (i === 7) { break; }
+    text += "The number is " + i + "<br>";
+}
+
+document.getElementById("Count").innerHTML = text;
+
+let text2 = "";
+for (let v = 3; v < 9; v++) {
+    if (v === 7) { continue; }
+    text2 += "The number is " + v + "<br>";
+}
+
+document.getElementById("Count2").innerHTML = text2;
