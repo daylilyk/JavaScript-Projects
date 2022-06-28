@@ -42,3 +42,14 @@ document.getElementById("Return").innerHTML = myFunction("Lily");
 function myFunction(name) {
     return "hello " + name;
 }
+
+let instrument = {
+    type: "piano",
+    brand: "Yamaha",
+    color: "black",
+    material: "wood",
+    description: function() {
+        return "The instrument is a " + this.color + this.material + this.type + " made by " + this.brand;
+    }
+};
+document.getElementById("Instrument_info").innerHTML = instrument.description();
