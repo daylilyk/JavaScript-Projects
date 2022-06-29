@@ -6,20 +6,25 @@
     </head>
 
 	<body>
-    <h1>What is your least favorite fruit?</h1>
-    <h3>Pick your least favorite fruit from this list:</h3>
-    <ul>
-        <li>Grapes</li>
-        <li>Banana</li>
-        <li>Apples</li>
-        <li>Tomato</li>
-        <li>Lime</li>
-    </ul>
-    <h3>Enter your choice below:</h3>
+        <h1 class = "Click">What is your least favorite fruit?</h1>
+        <button onclick="Fruit_change()">Change the quiz!</button>
+        <h3 class = "Click1">Pick your least favorite fruit from this list:</h3>
+        <button onclick="Fruit_change1()">Change the quiz!</button>
+        <ul>
+            <li>Grapes</li>
+            <li>Banana</li>
+            <li>Apples</li>
+            <li>Tomato</li>
+            <li>Lime</li>
+        </ul>
+        <h3>Enter your choice below:</h3>
 
-    <input id="Fruit_input" type="text">
-    <button onclick="Fruit_function()">Submit Color</button>
-    <p id="Output"></p>
-        <script src="Javascript/JavaScript_1.js"></script>
+        <input id="Fruit_input" type="text">
+        <button onclick="Fruit_function()">Submit Fruit</button>
+        <p id="Output"></p>
+        <canvas id="Canvas_ex" width="110" height="50" style="border:2px solid black"></canvas>
+        <canvas id="Canvas_ex2" width="110" height="50"></canvas> 
+    <script src="Javascript/JavaScript_1.js"></script>
+    
 	</body>
 </html>
