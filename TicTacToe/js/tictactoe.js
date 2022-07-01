@@ -8,9 +8,9 @@ function placeXOrO(squareNumber) {
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         let select = document.getElementById(squareNumber);
         if (activePlayer === 'X') {
-            select.style.backgroundImage = 'url("images/o.png")';
+            select.style.backgroundImage = 'url("images/star.png")';
         } else {
-            select.style.backgroundImage = 'url("images/x.png")';
+            select.style.backgroundImage = 'url("images/moon.png")';
         }
 
         selectedSquares.push(squareNumber + activePlayer);
@@ -20,7 +20,7 @@ function placeXOrO(squareNumber) {
         } else {
             activePlayer = 'X';
         }
-        audio('media/place.mp3');
+        audio('media/ping.mp3');
         if (activePlayer === 'O') {
             disableClick();
             setTimeout(function () { computersTurn(); }, 1000);
@@ -61,7 +61,7 @@ function checkWinConditions() {
     //checking for a tie if none of above conditions are met.
     //9 squares are selected the code executes.
     else if (selectedSquares.length >= 9){
-    audio('media/tie.mp3');
+    audio('media/buzzer.mp3');
     //sets a .3 second timer before the reset game is called.
     setTimeout(function () { resetGame(); }, 500);
     }
@@ -85,7 +85,7 @@ function disableClick() {
     setTimeout(function () { body.style.pointerEvents = 'auto'; }, 1000);
 }
 
-//takes a string parameter of the path for placement sound ('media/place.mp3')
+//takes a string parameter of the path for placement sound ('media/ping.mp3')
 function audio(audioURL) {
     let audio= new Audio(audioURL);
     audio.play();
@@ -150,7 +150,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //this line disables clicking whilee win sound is playing
         disableClick();
         //this line plays the win audio
-        audio('media/winGame.mp3');
+        audio('media/winner.mp3');
         //this line calls out main loop animation.
         animateLineDrawing();
         //this line waits 1 sec then clears canvas, resets game, ands allows clicking again.
