@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<!--Could not get to work! Must revisit-->
+<html>
+    <body>
+        <p id="XML_Example"></p>
+        <script>
+            var XML_Parser, XML_Document;
+
+            //creates a string
+            var Bugs = "<bugs>" +
+                "<name>Bee</name>" +
+                "<legs>Six</legs>" +
+                "<color>Yellow and Black</color>" +
+                "</bugs>";
+
+            //creates an XML DOM Parser
+            XML_Parser = new DomParser();
+
+            //creates a new XML DOM object using the text string
+            XML_Document = XML_Parser.parseFromString(Bugs,"text/xml");
+
+            document.getElementById("XML_Example").innerHTML = XML_Document.getElementsByTagName("name") [0].childNodes[0].nodeValue;
+        </script>
+    </body>
+</html>
